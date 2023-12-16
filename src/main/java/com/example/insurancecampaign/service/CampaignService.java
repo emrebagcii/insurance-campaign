@@ -25,9 +25,6 @@ public class CampaignService {
 
 
     public void createCampaign(Campaign campaign) {
-        campaign.setTitle(campaign.getTitle());
-        campaign.setDescription(campaign.getDescription());
-        campaign.setCategory(campaign.getCategory());
         campaign.setStatus(setStatus(campaign));
         Campaign createdCampaign = campaignRepository.save(campaign);
         saveCampaignHistory(createdCampaign);
